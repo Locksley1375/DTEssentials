@@ -25,12 +25,12 @@ public class Main {
     
 	@Listener
     public void onServerStart(GameStartedServerEvent event) {
-		getLogger().info("DTEssentils has started!");
+		getLogger().info("DTEssentials has started!");
     }
 	
 	@Listener
     public void onServerStop(GameStoppingServerEvent event) {
-		getLogger().info("DTEssentils has stopped!");
+		getLogger().info("DTEssentials has stopped!");
     }
 	
 }
