@@ -1,4 +1,4 @@
-package me.dragontechmc.DTEssentials;
+package com.dragontechmc.DTEssentials;
 
 import org.spongepowered.api.event.Listener;
 import org.spongepowered.api.event.game.state.GameStartedServerEvent;
