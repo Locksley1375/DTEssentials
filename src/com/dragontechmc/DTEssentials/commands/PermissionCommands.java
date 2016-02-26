@@ -12,7 +12,7 @@ import org.spongepowered.api.command.CommandSource;
 import org.spongepowered.api.command.args.CommandContext;
 import org.spongepowered.api.command.spec.CommandExecutor;
 import org.spongepowered.api.entity.living.player.Player;
-import org.spongepowered.api.service.permission.context.*;
+import org.spongepowered.api.service.permission.*;
 import org.spongepowered.api.service.sql.SqlService;
 import org.spongepowered.api.text.*;
 import org.spongepowered.api.util.Tristate;
