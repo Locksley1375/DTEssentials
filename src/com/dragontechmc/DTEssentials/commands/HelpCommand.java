@@ -13,8 +13,7 @@ import org.spongepowered.api.command.spec.CommandExecutor;
 import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.service.pagination.PaginationBuilder;
 import org.spongepowered.api.service.pagination.PaginationService;
-import org.spongepowered.api.text.Text;
-import org.spongepowered.api.text.Texts;
+import org.spongepowered.api.text.*;
 
 import com.dragontechmc.DTEssentials.DTEssentials;
 
@@ -38,17 +37,17 @@ public class HelpCommand implements CommandExecutor {
 		
 		if (command.equals("help") || command.equals("?")){
     		if(src instanceof Player) {
-    			contents.add(Texts.of("/dte help"));
+    			contents.add(Text.of("/dte help"));
     			
-    	    	builder.title(Texts.of("DTEssentials help"))
+    	    	builder.title(Text.of("DTEssentials help"))
     	        .contents(contents)
-    	        .footer(Texts.of(""))
+    	        .footer(Text.of(""))
     	        .paddingString("=")
     	        .sendTo(src);
         	}
         	else if(src instanceof ConsoleSource) {
-        		src.sendMessage(Texts.of("-- DTEssentials plugin help --"));
-        		src.sendMessage(Texts.of("/dte help"));
+        		src.sendMessage(Text.of("-- DTEssentials plugin help --"));
+        		src.sendMessage(Text.of("/dte help"));
         	}
         	else if(src instanceof CommandBlockSource) {
         	    
