@@ -7,7 +7,7 @@ import org.spongepowered.api.event.Listener;
 import org.spongepowered.api.event.game.state.GameStartedServerEvent;
 import org.spongepowered.api.event.game.state.GameStoppingServerEvent;
 import org.spongepowered.api.plugin.Plugin;
-import org.spongepowered.api.text.Texts;
+import org.spongepowered.api.text.*;
 import org.spongepowered.api.text.format.TextColors;
 
 import com.dragontechmc.DTEssentials.commands.HelpCommand;
@@ -47,20 +47,20 @@ public class DTEssentials {
 	
 	public void buildCommands(){
 		CommandSpec helpCommandSpec = CommandSpec.builder()
-			    .description(Texts.builder("DTEssentials help command").color(TextColors.GOLD).build())
+			    .description(Text.builder("DTEssentials help command").color(TextColors.GOLD).build())
 			    .permission("DTEssentials.command.help")
 			    .arguments(
-			    		GenericArguments.onlyOne(GenericArguments.string(Texts.of("command")))
+			    		GenericArguments.onlyOne(GenericArguments.string(Text.of("command")))
 			    )
 			    .executor(new HelpCommand(this))
 			    .build();
 
 		CommandSpec permissionCommandSpec = CommandSpec.builder()
-			    .description(Texts.builder("DTEssentials help command").color(TextColors.GOLD).build())
+			    .description(Text.builder("DTEssentials help command").color(TextColors.GOLD).build())
 			    .arguments(
-			    		GenericArguments.onlyOne(GenericArguments.player(Texts.of("player"))),
-			    		GenericArguments.onlyOne(GenericArguments.string(Texts.of("operation"))),
-			    		GenericArguments.onlyOne(GenericArguments.string(Texts.of("permission")))
+			    		GenericArguments.onlyOne(GenericArguments.player(Text.of("player"))),
+			    		GenericArguments.onlyOne(GenericArguments.string(Text.of("operation"))),
+			    		GenericArguments.onlyOne(GenericArguments.string(Text.of("permission")))
 			    )
 			    .executor(new PermissionCommands(this))
 			    .build();
