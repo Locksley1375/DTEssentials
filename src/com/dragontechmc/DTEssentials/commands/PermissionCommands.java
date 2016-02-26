@@ -14,7 +14,7 @@ import org.spongepowered.api.command.spec.CommandExecutor;
 import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.service.permission.context.*;
 import org.spongepowered.api.service.sql.SqlService;
-import org.spongepowered.api.text.Texts;
+import org.spongepowered.api.text.*;
 import org.spongepowered.api.util.Tristate;
 
 import com.dragontechmc.DTEssentials.DTEssentials;
@@ -38,7 +38,7 @@ public class PermissionCommands implements CommandExecutor {
 		
 		if (operation.equals("add")){
 			player.getSubjectData().setPermission(player.getActiveContexts(), permission, Tristate.TRUE);
-			player.sendMessage(Texts.of(player.hasPermission(permission)));
+			player.sendMessage(Text.of(player.hasPermission(permission)));
 			/*try {
 				getPlayerPermissions();
 			} catch (SQLException e) {
@@ -48,7 +48,7 @@ public class PermissionCommands implements CommandExecutor {
 		
 		if (operation.equals("remove")){
 			player.getSubjectData().setPermission(player.getActiveContexts(), permission, Tristate.UNDEFINED);
-			player.sendMessage(Texts.of(player.hasPermission(permission)));
+			player.sendMessage(Text.of(player.hasPermission(permission)));
 		}
 		
 		return CommandResult.success();
