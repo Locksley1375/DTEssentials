@@ -32,12 +32,12 @@ public class HelpCommand implements CommandExecutor {
 	public CommandResult execute(CommandSource src, CommandContext args) throws CommandException {
 		
 		
-		
-		builder.title(Text.of("Dragon Tech Essentials Help"))
+		paginationService.builder()
+		.title(Text.of("Dragon Tech Essentials Help"))
 		.contents(Text.of("Item 1"), Text.of("Item 2"), Text.of("Item 3"))
-	    .header(Text.of("Header"))
-	    .footer(Text.of("Footer"))
-	    .padding(Text.of("="));
+	    	.header(Text.of("Header"))
+		.footer(Text.of("Footer"))
+		.padding(Text.of("="));
 		
         return CommandResult.success();
 	
