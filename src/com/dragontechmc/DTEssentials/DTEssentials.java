@@ -60,7 +60,7 @@ public class DTEssentials {
 				 .description(Text.of("Help Command"))
 				 .permission("DTEssentials.new.dtehelp")
 				 .arguments(
-						 GenericArguments.onlyOne(GenericArguments.string(Text.of("String"))))
+						 GenericArguments.onlyOne(GenericArguments.string(Text.of("help"))))
 				 .executor(new HelpCommand())
 				 .build();
 		
