@@ -19,25 +19,19 @@ import java.util.List;
 
 public class HelpCommand implements CommandExecutor {
 	
-
-	PaginationService paginationService =
-		    Sponge.getServiceManager().provide(PaginationService.class).get();
-		PaginationList.Builder builder = paginationService.builder();
-	
-		
-
-		
-	
 	@Override
 	public CommandResult execute(CommandSource src, CommandContext args) throws CommandException {
 		
+		PaginationService paginationService =
+		    Sponge.getServiceManager().provide(PaginationService.class).get();
 		
 		paginationService.builder()
 		.title(Text.of("Dragon Tech Essentials Help"))
 		.contents(Text.of("Item 1"), Text.of("Item 2"), Text.of("Item 3"))
 	    	.header(Text.of("Header"))
 		.footer(Text.of("Footer"))
-		.padding(Text.of("="));
+		.padding(Text.of("="))
+		.sendTo(src);
 		
         return CommandResult.success();
 	
