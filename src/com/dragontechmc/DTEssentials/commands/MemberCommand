@@ -1,0 +1,28 @@
+package com.dragontechmc.DTEssentials.commands;
+
+import org.spongepowered.api.command.CommandException;
+import org.spongepowered.api.command.CommandResult;
+import org.spongepowered.api.command.CommandSource;
+import org.spongepowered.api.command.args.CommandContext;
+import org.spongepowered.api.command.spec.CommandExecutor;
+import org.spongepowered.api.text.*;
+import org.spongepowered.api.text.action.TextActions;
+import org.spongepowered.api.text.format.TextColors;
+
+
+
+public class MemberCommand implements CommandExecutor{
+
+
+	
+    @Override
+    public CommandResult execute(CommandSource src, CommandContext args) throws CommandException {
+    	
+    	Text MemberMsg = Text.builder("here").onClick(TextActions.runCommand("http://tinyurl.com/memberdt")).build();
+    	
+        src.sendMessage(Text.of(TextColors.GREEN," Become a Member for free by following the instructions ", TextColors.AQUA, MemberMsg ));
+        return CommandResult.success();
+    }
+   
+
+}
