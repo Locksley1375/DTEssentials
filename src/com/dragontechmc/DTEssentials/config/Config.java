@@ -73,6 +73,7 @@ public class Config {
 			
 			config.getNode("swears").setValue(list);
 			// ^ This line hates me.... Help?
+			// Java Error: The type com.google.common.reflect.TypeToken cannot be resolved. It is indirectly referenced from required .class files
 			
 			config.getNode("Website").setValue("http://dragontechmc.com").setComment("/website command Answer");
 			config.getNode("MemberLink").setValue("http://tinyurl.com/memberdt").setComment("/member command Answer");
