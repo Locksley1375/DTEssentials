@@ -11,7 +11,7 @@ import org.spongepowered.api.text.*;
 import org.spongepowered.api.text.action.TextActions;
 import org.spongepowered.api.text.format.TextColors;
 
-import com.dragontechmc.DTEssentials.config1.Config;
+import com.dragontechmc.DTEssentials.config.Config;
 
 public class MemberCommand implements CommandExecutor{
 
